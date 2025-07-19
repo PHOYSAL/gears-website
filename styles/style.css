@@ -102,7 +102,12 @@ section {
     width: 120%;
     padding: 20px;  
 }
-
+/* company section related style  */
+.company-list{
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    place-items: center;
+}
 
 /* media query  */
 @media screen and (max-width:576px) {
@@ -117,5 +122,14 @@ section {
         flex-direction: column-reverse;
         text-align: center;
         gap: 50px;
+    }
+    .company-list{
+        grid-template-columns: repeat(2,1fr);
+        place-items: center;
+        gap: 20px;
+    }
+    .company-list>div:last-child{
+        grid-column: span 2;
+        justify-self: center;
     }
 }
