@@ -1,8 +1,121 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 .inter-font {
-  font-family: "Inter", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* shared style  */
+header,
+main {
+    max-width: 1440px;
+    margin: 20px auto;
+}
+
+section {
+    margin-bottom: 120px;
+}
+
+.display-flex {
+    display: flex;
+}
+
+.text-color-1 {
+    color: #3A3A3A;
+}
+
+.btn-primary {
+    border: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 10px 24px;
+    border-radius: 41px;
+    background: rgb(224, 44, 109);
+    cursor: pointer;
+    transition: transform 2s, background-color 2s;
+}
+.btn-primary:hover{
+    transform: scale(1.05);
+    background-color: palevioletred;
+}
+.description{
+    font-size: .75rem;
+    font-weight: 600;
+    color: #3A3A3A;
+}
+
+/* navbar related style  */
+.nav-container {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.nav-list {
+    justify-content: space-between;
+    gap: 35px;
+}
+
+.nav-list li {
+    list-style: none;
+}
+
+.nav-list li a {
+    text-decoration: none;
+    color: #3A3A3A;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.nav-list li a:hover {
+    color: #E02C6D;
+}
+
+/* hero section related style  */
+.hero-container{
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 250px;
+}
+.hero-title{
+    font-size: 3.25rem;
+    font-weight: 700;
+    color: #3A3A3A;
+    margin-bottom: 10px;
+}
+.image-container{
+    background: url("../images/Circle\ design.svg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.image-container img{
+    width: 120%;
+    padding: 20px;  
+}
+
+
+/* media query  */
+@media screen and (max-width:576px) {
+    body{
+        padding: 10px;
+    }
+    .nav-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-container{
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 50px;
+    }
 }
